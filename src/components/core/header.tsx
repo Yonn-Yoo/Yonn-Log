@@ -1,5 +1,5 @@
-import { navArray } from '@/array/navArray';
 import Link from 'next/link';
+import HeaderNavigation from './header-navigation';
 
 export default function Header() {
   return (
@@ -9,17 +9,7 @@ export default function Header() {
           YonnLog
         </h1>
       </Link>
-      <nav className="flex space-x-3">
-        {navArray.map(({ label, link }) => (
-          <Link
-            href={link}
-            key={label}
-            className="font-medium text-sm md:text-base 2xl:text-lg"
-          >
-            {label}
-          </Link>
-        ))}
-      </nav>
+      <HeaderNavigation />
     </header>
   );
 }

@@ -1,4 +1,4 @@
-type NavigationType = {
+export type NavigationType = {
   label: 'About' | 'Posts' | 'Contact';
   link: '/about' | '/posts' | '/contact';
 };
