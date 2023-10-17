@@ -13,6 +13,8 @@ const config: Config = {
         text2: '#d9d9d9',
         text3: '#acacac',
         text4: '#595959',
+        background1: '#212121',
+        background2: '#323232',
       },
     },
   },
