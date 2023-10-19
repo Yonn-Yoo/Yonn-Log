@@ -25,7 +25,7 @@ const buttonArray = [
 export default function HeroSection() {
   return (
     <section className="max-w-4xl w-full mx-auto">
-      <div className="w-full flex items-center space-x-4 border-b border-stone-700 pb-5 md:pb-8 mb-5 md:mb-8">
+      <div className="w-full flex items-center space-x-4 border-b border-stone-700 pb-5 md:pb-7 mb-5 md:mb-7">
         <Image
           width={100}
           height={100}
@@ -43,7 +43,7 @@ export default function HeroSection() {
           </span>
         </div>
       </div>
-      <div className="flex space-x-2">
+      <div className="flex space-x-3">
         {buttonArray.map(({ href, icon, newTab }) => (
           <button
             key={href}

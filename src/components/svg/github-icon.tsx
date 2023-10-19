@@ -4,7 +4,7 @@ export default function GithubIcon() {
       xmlns="http://www.w3.org/2000/svg"
       height="1em"
       viewBox="0 0 496 512"
-      className="w-5 h-5"
+      className="w-5 md:w-7 h-5 md:h-7"
     >
       <path
         fill="white"
