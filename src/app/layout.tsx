@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${sans.className} max-w-screen-2xl mx-auto flex flex-col`}
       >
         <Header />
-        <main className="grow">{children}</main>
+        <main className="grow py-5 md:py-10">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,7 +1,9 @@
+import HeroSection from '@/components/hero-section';
+
 export default function Home() {
   return (
-    <main>
-      <div>hello home</div>
+    <main className="px-5">
+      <HeroSection />
     </main>
   );
 }
