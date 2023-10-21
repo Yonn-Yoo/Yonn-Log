@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import profileImage from '../../public/images/profile.jpeg';
 import EnvelopeIcon from './svg/envelope-icon';
 import GithubIcon from './svg/github-icon';
 import HomeIcon from './svg/home-icon';
@@ -27,11 +28,9 @@ export default function HeroSection() {
     <section className="max-w-4xl w-full mx-auto">
       <div className="w-full flex items-center space-x-4 border-b border-stone-700 pb-5 md:pb-7 mb-5 md:mb-7">
         <Image
-          width={100}
-          height={100}
           priority
           className="rounded-full object-cover w-20 h-20 md:w-24 md:h-24 xl:w-28 xl:h-28"
-          src="https://velog.velcdn.com/images/ysyoo719/profile/da634545-d1a3-4446-af6d-98e46de80ffa/image.jpeg"
+          src={profileImage}
           alt="avatar"
         />
         <div className="flex flex-col space-y-1">

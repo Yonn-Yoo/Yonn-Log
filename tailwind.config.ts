@@ -15,6 +15,7 @@ const config: Config = {
         text4: '#595959',
         background1: '#212121',
         background2: '#323232',
+        background3: '#1E1E1E',
       },
     },
   },
