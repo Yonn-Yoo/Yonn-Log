@@ -2,13 +2,17 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 
 export type PostType = {
-  id: string;
   title: string;
   description: string;
   date: string;
   image: string;
-  featured: boolean;
+  category: string;
+  path: string;
 };
+
+export async function getRecentPosts(): Promise<PostType[]> {
+  return getPosts().then((posts) => posts.slice(0, 8));
+}
 
 export async function getPosts(): Promise<PostType[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');

@@ -1,7 +1,7 @@
-export default function PostsPage() {
+export default async function PostsPage() {
   return (
     <section>
-      <span>hello posts page</span>
+      <div>asdf</div>
     </section>
   );
 }

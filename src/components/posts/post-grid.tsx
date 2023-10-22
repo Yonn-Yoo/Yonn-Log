@@ -9,7 +9,7 @@ export default function PostsGrid({ posts }: { posts: PostType[] }) {
       {posts.map((post) => (
         <li
           className="bg-background3 border border-background3 rounded-lg shadow group hover:shadow-xl hover:-translate-y-1.5 duration-200 ease-out cursor-pointer"
-          key={`post-${post.id}`}
+          key={`post-${post.path}`}
         >
           <PostCard post={post} />
         </li>
