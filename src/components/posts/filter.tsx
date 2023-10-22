@@ -2,22 +2,16 @@
 
 import { CategoryType, categoryArray } from '@/array/categoryArray';
 import { Menu, Transition } from '@headlessui/react';
-import { Dispatch, Fragment, SetStateAction, useState } from 'react';
+import { Fragment } from 'react';
 
 type Props = {
   category: CategoryType['value'];
-  setCategory: Dispatch<SetStateAction<CategoryType['value']>>;
+  onClick: (category: CategoryType['value']) => void;
 };
 
-export default function Filter({ category, setCategory }: Props) {
-  const [selected, setSelected] = useState('All category');
-
-  const handleOnClick = (
-    label: CategoryType['label'],
-    value: CategoryType['value']
-  ) => {
-    setSelected(label);
-    setCategory(value);
+export default function Filter({ category, onClick }: Props) {
+  const displayLabel = () => {
+    return categoryArray.find((item) => item.value === category)?.label;
   };
 
   return (
@@ -25,7 +19,7 @@ export default function Filter({ category, setCategory }: Props) {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-500 bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition">
-            {selected}
+            {displayLabel()}
           </Menu.Button>
         </div>
         <Transition
@@ -45,7 +39,7 @@ export default function Filter({ category, setCategory }: Props) {
                     const isSelected = value === category;
                     return (
                       <button
-                        onClick={() => handleOnClick(label, value)}
+                        onClick={() => onClick(value)}
                         className={`${active && 'bg-background1'} ${
                           isSelected && 'bg-teal-600 font-semibold'
                         } text-text1 group flex w-full items-center rounded-md px-2 py-2 text-sm`}
