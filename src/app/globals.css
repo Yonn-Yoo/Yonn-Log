@@ -12,3 +12,18 @@ html {
   background-color: #121212;
   color: #ececec;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12a195;
+  border-radius: 100px;
+}
