@@ -14,7 +14,7 @@ export default async function PostDetailPage({ params: { path } }: Props) {
     <article className="max-w-4xl w-full mx-auto mt-5 md:mt-8 xl:mt-14 px-5">
       <PostContent post={post} />
       <MarkdownViewer content={post.content} />
-      <PostNavigation />
+      <PostNavigation post={post} />
     </article>
   );
 }
