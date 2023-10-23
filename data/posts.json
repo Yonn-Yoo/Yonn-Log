@@ -5,7 +5,7 @@
     "date": "2021-12-31",
     "category": "my story",
     "image": "/thumbnail/thumbnail1.jpg",
-    "path": "2021-review"
+    "path": "review-2021"
   },
   {
     "title": "자바스크립트 기초 문법",
@@ -21,7 +21,7 @@
     "date": "2022-06-15",
     "category": "javascript",
     "image": "/thumbnail/thumbnail3.jpg",
-    "path": "javascript-10tips"
+    "path": "javascript-10-tips"
   },
   {
     "title": "Node 기초 정리",
@@ -37,7 +37,7 @@
     "date": "2022-12-31",
     "category": "my story",
     "image": "/thumbnail/thumbnail5.jpg",
-    "path": "2022-review"
+    "path": "review-2022"
   },
   {
     "title": "Node 프로 팁!",
@@ -45,7 +45,7 @@
     "date": "2023-04-10",
     "category": "backend",
     "image": "/thumbnail/thumbnail6.jpg",
-    "path": "node-protip"
+    "path": "node-pro-tips"
   },
   {
     "title": "리액트 Best Practice!",
@@ -53,7 +53,7 @@
     "date": "2023-04-15",
     "category": "frontend",
     "image": "/thumbnail/thumbnail7.jpg",
-    "path": "react-best-practices"
+    "path": "best-react-practices"
   },
   {
     "title": "리액트 18버전!",
@@ -61,6 +61,6 @@
     "date": "2023-05-02",
     "category": "frontend",
     "image": "/thumbnail/thumbnail8.jpg",
-    "path": "react-v18"
+    "path": "react18-walkthrough"
   }
 ]

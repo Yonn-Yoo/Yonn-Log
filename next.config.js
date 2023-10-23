@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'velog.velcdn.com',
         pathname: '/images/ysyoo719/profile/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
     ],
   },
 };
