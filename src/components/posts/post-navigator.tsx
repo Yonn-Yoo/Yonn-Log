@@ -4,15 +4,18 @@ import Link from 'next/link';
 import LeftArrow from '../svg/left-arrow';
 
 type Props = {
-  post: PostType | null;
+  post: PostType;
   isPrev?: boolean;
 };
 
-export default function PostNavigator({ post, isPrev }: Props) {
+export default function PostNavigator({
+  post: { path, image, title, date },
+  isPrev,
+}: Props) {
   return (
-    <Link href={`/posts/${post?.path}`} className="w-full h-full">
+    <Link href={`/posts/${path}`} className="w-full h-full">
       <div
-        style={{ backgroundImage: `url(${post?.image})` }}
+        style={{ backgroundImage: `url(${image})` }}
         className="w-full h-full bg-cover bg-center relative group cursor-pointer"
       >
         <div
@@ -33,9 +36,9 @@ export default function PostNavigator({ post, isPrev }: Props) {
             <span className="font-medium text-text2 text-xs md:text-sm max-sm:hidden">
               {isPrev ? '이전' : '다음'} 글:
             </span>
-            <h4 className="font-semibold md:text-lg">{post?.title}</h4>
+            <h4 className="font-semibold md:text-lg">{title}</h4>
             <time className="text-text2 text-xs md:text-sm">
-              {moment(post?.date).format('YYYY. MM. DD.')}
+              {moment(date).format('YYYY. MM. DD.')}
             </time>
           </div>
         </div>
