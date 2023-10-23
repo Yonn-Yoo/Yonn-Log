@@ -1,10 +1,10 @@
-import { PostData } from '@/service/posts';
+import { PostType } from '@/service/posts';
 import moment from 'moment';
 import Link from 'next/link';
 import LeftArrow from '../svg/left-arrow';
 
 type Props = {
-  post: PostData | null;
+  post: PostType | null;
   isPrev?: boolean;
 };
 
