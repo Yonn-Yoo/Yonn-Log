@@ -1,7 +1,8 @@
 'use client';
 
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
+import { sendContactEmail } from '@/service/contact';
 import LoaderAnimation from './core/loader';
 
 export type EmailData = {
@@ -45,25 +46,28 @@ export default function ContactForm() {
     return emailRegex.test(form.from) ? true : false;
   };
 
-  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   setLoading(true);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-  //   sendContactEmail(form)
-  //     .then((res) => {
-  //       openSuccessModal();
-  //       setForm(DEFAULT_STATE);
-  //     })
-  //     .catch(openErrorModal)
-  //     .finally(() => setLoading(false));
-  // };
+    sendContactEmail(form)
+      .then((res) => {
+        // openSuccessModal();
+        setForm(DEFAULT_STATE);
+      })
+      // .catch(openErrorModal)
+      .finally(() => setLoading(false));
+  };
 
   return (
     <>
       <section className="relative w-full lg:w-1/2 shadow-xl rounded-xl border border-zinc-200 bg-cover bg-center">
         {loading && <Loader />}
         <section className="bg-background2 backdrop-blur-sm rounded-xl">
-          <form className="max-w-xl mx-auto p-8 rounded-xl">
+          <form
+            onSubmit={handleSubmit}
+            className="max-w-xl mx-auto p-8 rounded-xl"
+          >
             <div className="relative z-0 w-full mb-6 md:mb-8 group">
               <input
                 value={form.from}
