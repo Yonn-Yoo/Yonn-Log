@@ -1,11 +1,15 @@
 import ContactForm from '@/components/contact-form';
+import Toast from '@/components/toast';
 
 export default function ContactPage() {
   return (
-    <section className="max-w-7xl w-full flex max-lg:flex-col max-lg:space-y-5 px-6 items-center fixed right-1/2 md:bottom-1/2 translate-x-1/2 md:translate-y-1/2 max-md:mt-10">
-      <PhraseSection />
-      <ContactForm />
-    </section>
+    <>
+      <Toast />
+      <section className="max-w-7xl w-full flex max-lg:flex-col max-lg:space-y-5 px-6 items-center fixed right-1/2 md:bottom-1/2 translate-x-1/2 md:translate-y-1/2 max-md:mt-10">
+        <PhraseSection />
+        <ContactForm />
+      </section>
+    </>
   );
 }
 

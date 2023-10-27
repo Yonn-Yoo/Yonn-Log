@@ -78,10 +78,10 @@ export default function ContactForm() {
                 onChange={onChange}
                 className={`block py-2.5 px-0 w-full text-sm text-text1 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 ${
                   isEmailValid() || !form.from
-                    ? 'focus:border-blue-400'
+                    ? 'focus:border-teal-400'
                     : '!border-rose-400'
                 } ${
-                  isEmailValid() && 'border-green-400 focus:border-green-400'
+                  isEmailValid() && 'border-teal-400 focus:border-teal-400'
                 } peer`}
                 placeholder=" "
               />
@@ -96,10 +96,10 @@ export default function ContactForm() {
                 htmlFor="from"
                 className={`peer-focus:font-medium absolute text-sm text-text1 duration-200 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 ${
                   isEmailValid() || !form.from
-                    ? 'peer-focus:text-blue-400'
+                    ? 'peer-focus:text-teal-400'
                     : '!text-rose-400'
                 } ${
-                  isEmailValid() && 'text-green-400 peer-focus:text-green-400'
+                  isEmailValid() && 'text-teal-400 peer-focus:text-teal-400'
                 } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
                 Email
@@ -113,12 +113,12 @@ export default function ContactForm() {
                 name="name"
                 autoComplete="off"
                 onChange={onChange}
-                className="block py-2.5 px-0 w-full text-sm text-text1 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-400 peer"
+                className="block py-2.5 px-0 w-full text-sm text-text1 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-400 peer"
                 placeholder=" "
               />
               <label
                 htmlFor="name"
-                className="peer-focus:font-medium absolute text-sm text-text1 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="peer-focus:font-medium absolute text-sm text-text1 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Name
               </label>
@@ -131,12 +131,12 @@ export default function ContactForm() {
                 name="subject"
                 autoComplete="off"
                 onChange={onChange}
-                className="block py-2.5 px-0 w-full text-sm text-text1 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-400 peer"
+                className="block py-2.5 px-0 w-full text-sm text-text1 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-400 peer"
                 placeholder=" "
               />
               <label
                 htmlFor="subject"
-                className="peer-focus:font-medium absolute text-sm text-text1 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="peer-focus:font-medium absolute text-sm text-text1 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Subject
               </label>
@@ -144,7 +144,7 @@ export default function ContactForm() {
             <div className="relative z-0 w-full mb-6 md:mb-8 group">
               <label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium text-text1 peer-focus:text-blue-400"
+                className="block mb-2 text-sm font-medium text-text1 peer-focus:text-teal-400"
               >
                 Your message
               </label>
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 maxLength={200}
                 spellCheck={false}
                 onChange={onChange}
-                className="block p-2.5 w-full h-24 resize-none text-sm text-black bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-400 peer"
+                className="block p-2.5 w-full h-24 resize-none text-sm text-black bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-500 focus:border-teal-400 peer"
                 placeholder="Write your message here..."
               ></textarea>{' '}
               <span className="absolute bottom-2 right-2 text-xs text-zinc-400">
